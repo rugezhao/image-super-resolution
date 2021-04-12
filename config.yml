@@ -1,6 +1,6 @@
 ---
 default:
-  generator: rdn
+  generator: rrdn
   feature_extractor: false
   discriminator: false
   training_set: div2k
@@ -64,7 +64,7 @@ session:
       beta2: 0.999
       epsilon: null
 test_sets:
-  sample: ./data/input/sample
+  sample: ./data/input/living_room
 training_sets:
   custom data:
     lr_train_dir: ./data/custom/lr/train
@@ -80,4 +80,4 @@ training_sets:
     data_name: div2k
 weights_paths:
   discriminator:
-  generator:
+  generator: ./weights/rrdn-C4-D3-G32-G032-T10-x4_epoch299.hdf5 
